@@ -35,7 +35,7 @@
     }
     .content {
       display: none;
-      padding: 100px 20px 20px 20px;
+      padding: 120px 20px 20px 20px;
       max-width: 800px;
       margin: auto;
       line-height: 1.7;
@@ -54,11 +54,20 @@
 </head>
 <body>
   <div class="lang-toggle">
-  
     <button onclick="showContent('en')">English</button>
     <button onclick="showContent('ar')">العربية</button>
     <button onclick="showContent('hi')">हिन्दी</button>
-     <button onclick="showContent('ml')">മലയാളം</button>
+    <button onclick="showContent('ur')">اردو</button>
+    <button onclick="showContent('fr')">Français</button>
+    <button onclick="showContent('es')">Español</button>
+    <button onclick="showContent('zh')">中文</button>
+    <button onclick="showContent('bn')">বাংলা</button>
+    <button onclick="showContent('pt')">Português</button>
+    <button onclick="showContent('de')">Deutsch</button>
+    <button onclick="showContent('ml')">മലയാളം</button>
+    <button onclick="showContent('en')">English</button>
+    <button onclick="showContent('ar')">العربية</button>
+    <button onclick="showContent('hi')">हिन्दी</button>
     <button onclick="showContent('ur')">اردو</button>
     <button onclick="showContent('fr')">Français</button>
     <button onclick="showContent('es')">Español</button>
@@ -259,8 +268,11 @@
 </div>
 <div style="text-align:center; font-size: 13px; color: #666; margin: 20px 0;">
   Website maintained by <a href="https://www.logicorptech.com" target="_blank">www.logicorptech.com</a>
+<div style="text-align:center; margin: 40px 0;">
+  <p><strong>Scan this QR code to visit this site anytime:</strong></p>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://ayubtomb.github.io/information/&amp;size=150x150" alt="QR Code to Prophet Ayub's Tomb site">
 </div>
-<script>
+$1
     function showContent(lang) {
       const languages = ['en', 'ar', 'hi', 'ur', 'fr', 'es', 'zh', 'bn', 'pt', 'de', 'ml'];
       languages.forEach(code => {
