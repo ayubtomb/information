@@ -54,6 +54,7 @@
 </head>
 <body>
   <div class="lang-toggle">
+    <button onclick="showContent('ml')">മലയാളം</button>
     <button onclick="showContent('en')">English</button>
     <button onclick="showContent('ar')">العربية</button>
     <button onclick="showContent('hi')">हिन्दी</button>
@@ -260,7 +261,7 @@
 </div>
 <script>
     function showContent(lang) {
-      const languages = [$2, 'ml'];
+      const languages = ['en', 'ar', 'hi', 'ur', 'fr', 'es', 'zh', 'bn', 'pt', 'de', 'ml'];
       languages.forEach(code => {
         document.getElementById("content-" + code).style.display = lang === code ? 'block' : 'none';
       });
