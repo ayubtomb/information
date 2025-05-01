@@ -11,32 +11,21 @@
       padding: 0;
       background: #f4f4f4;
     }
-    .language-selector {
+    .lang-toggle {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(to bottom right, #008080, #004d4d);
-      color: white;
-      flex-direction: column;
+      justify-content: flex-end;
+      background-color: #008080;
+      padding: 10px 20px;
     }
-    .language-selector h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    .lang-btn {
-      padding: 15px 30px;
-      margin: 10px;
-      font-size: 18px;
-      cursor: pointer;
+    .lang-toggle button {
+      background-color: white;
       border: none;
-      border-radius: 10px;
-      background-color: #ffffff;
+      padding: 8px 16px;
+      margin-left: 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
       color: #008080;
-      transition: 0.3s;
-    }
-    .lang-btn:hover {
-      background-color: #e0f7f7;
     }
     .content {
       display: none;
@@ -58,10 +47,9 @@
   </style>
 </head>
 <body>
-  <div class="language-selector" id="languageSelector">
-    <h1>Select Language / اختر اللغة</h1>
-    <button class="lang-btn" onclick="showContent('en')">English</button>
-    <button class="lang-btn" onclick="showContent('ar')">العربية</button>
+  <div class="lang-toggle">
+    <button onclick="showContent('en')">English</button>
+    <button onclick="showContent('ar')">العربية</button>
   </div>
 
   <div class="content" id="content-en">
@@ -120,9 +108,12 @@
 
   <script>
     function showContent(lang) {
-      document.getElementById("languageSelector").style.display = "none";
-      document.getElementById("content-" + lang).style.display = "block";
+      document.getElementById("content-en").style.display = lang === 'en' ? 'block' : 'none';
+      document.getElementById("content-ar").style.display = lang === 'ar' ? 'block' : 'none';
     }
+
+    // Auto-detect or default to English
+    showContent('en');
   </script>
 </body>
 </html>
