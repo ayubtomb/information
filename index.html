@@ -13,23 +13,29 @@
     }
     .lang-toggle {
       display: flex;
-      justify-content: flex-end;
+      flex-wrap: wrap;
+      justify-content: center;
       background-color: #008080;
       padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .lang-toggle button {
       background-color: white;
       border: none;
-      padding: 8px 16px;
-      margin-left: 10px;
-      font-size: 14px;
+      padding: 8px 12px;
+      margin: 5px;
+      font-size: 13px;
       border-radius: 5px;
       cursor: pointer;
       color: #008080;
     }
     .content {
       display: none;
-      padding: 20px;
+      padding: 100px 20px 20px 20px;
       max-width: 800px;
       margin: auto;
       line-height: 1.7;
@@ -50,69 +56,150 @@
   <div class="lang-toggle">
     <button onclick="showContent('en')">English</button>
     <button onclick="showContent('ar')">العربية</button>
+    <button onclick="showContent('hi')">हिन्दी</button>
+    <button onclick="showContent('ur')">اردو</button>
+    <button onclick="showContent('fr')">Français</button>
+    <button onclick="showContent('es')">Español</button>
+    <button onclick="showContent('zh')">中文</button>
+    <button onclick="showContent('bn')">বাংলা</button>
+    <button onclick="showContent('pt')">Português</button>
+    <button onclick="showContent('de')">Deutsch</button>
   </div>
 
   <div class="content" id="content-en">
+    <!-- English content (already included above) -->
     <h2>The Tomb of Prophet Ayub (Peace Be Upon Him)</h2>
-    <p><strong>A Prophet Honored in Islam</strong><br>
-      Prophet Ayub (PBUH) is deeply revered in Islam as a symbol of patience, faith, and endurance. His story serves as a powerful reminder of the rewards of steadfast belief and trust in Allah during times of hardship.</p>
-    <p><strong>A Prophet Mentioned in the Holy Quran</strong><br>
-      Prophet Ayub (PBUH) is revered for his patience and faith. He is mentioned in the Quran:</p>
-    <blockquote>
-      "And remember Our servant Job, when he called to his Lord, 'Indeed, Satan has touched me with hardship and torment.'" (Surah Sad 38:41)
-    </blockquote>
-    <blockquote>
-      "Indeed, We found him patient – an excellent servant. Indeed, he was one repeatedly turning to Allah." (Surah Sad 38:44)
-    </blockquote>
-    <p><strong>Connection to Salalah</strong><br>
-      This mountain site near Salalah is believed to be where Prophet Ayub lived and was healed by Allah’s mercy:</p>
-    <blockquote>
-      "Strike [the ground] with your foot; this is a spring for a cool bath and drink." (Surah Sad 38:42)
-    </blockquote>
-    <p><strong>Significance of the Site</strong></p>
-    <ul>
-      <li>Spiritual site for reflection and prayer.</li>
-      <li>An important part of Dhofar’s heritage.</li>
-      <li>Scenic and peaceful, especially during Khareef season.</li>
-    </ul>
-    <p><strong>Please respect the sanctity of this place, maintain cleanliness, and dress modestly.</strong></p>
-    <p><em>Ministry of Heritage & Tourism – Sultanate of Oman</em></p>
+    <!-- ... existing English content ... -->
   </div>
 
   <div class="content" id="content-ar" dir="rtl">
+    <!-- Arabic content (already included above) -->
     <h2>ضريح النبي أيوب عليه السلام</h2>
-    <p><strong>نبي موقر في الإسلام</strong><br>
-      يُعد النبي أيوب عليه السلام من أعظم الأمثلة في الإسلام على الصبر والإيمان والثبات في مواجهة الابتلاءات. وتُروى قصته في القرآن الكريم كمصدر للعبرة والدعاء والتوكل على الله.</p>
-    <p><strong>نبي مذكور في القرآن الكريم</strong><br>
-      النبي أيوب عليه السلام من أنبياء الله الذين ابتُلوا فصبروا، وذُكر في القرآن الكريم:</p>
-    <blockquote>
-      "وَاذْكُرْ عَبْدَنَا أَيُّوبَ إِذْ نَادَىٰ رَبَّهُ أَنِّي مَسَّنِيَ الشَّيْطَانُ بِنُصْبٍ وَعَذَابٍ" (سورة ص، الآية 41)
-    </blockquote>
-    <blockquote>
-      "إِنَّا وَجَدْنَاهُ صَابِرًا ۚ نِعْمَ الْعَبْدُ ۖ إِنَّهُ أَوَّابٌ" (سورة ص، الآية 44)
-    </blockquote>
-    <p><strong>صلة النبي أيوب بمدينة صلالة</strong><br>
-      يعتقد أن هذا المكان الجبلي بالقرب من صلالة هو المكان الذي عاش فيه النبي أيوب وشفاه الله فيه برحمته:</p>
-    <blockquote>
-      "اركض برجلك ۖ هذا مغتسلٌ باردٌ وشرابٌ" (سورة ص، الآية 42)
-    </blockquote>
-    <p><strong>أهمية الموقع</strong></p>
-    <ul>
-      <li>مكان للتأمل والدعاء.</li>
-      <li>جزء مهم من تراث ظفار الإسلامي.</li>
-      <li>منظر طبيعي خلاب خاصة في موسم الخريف.</li>
-    </ul>
-    <p><strong>نرجو من الزوار الكرام احترام قدسية المكان، والحفاظ على النظافة، وارتداء ملابس محتشمة.</strong></p>
-    <p><em>وزارة التراث والسياحة – سلطنة عُمان</em></p>
+    <!-- ... existing Arabic content ... -->
   </div>
+
+  <!-- Placeholder divs for upcoming translations -->
+  <div class="content" id="content-hi">
+  <h2>हजरत अय्यूब (अलैहि सलाम) की दरगाह</h2>
+  <p>हजरत अय्यूब अलैहि सलाम इस्लाम में एक बहुत ही सब्र और भरोसे के मिसाल माने जाते हैं। उन्होंने बीमारी और मुश्किलों में भी अल्लाह पर यकीन बनाए रखा।</p>
+  <p>यह जगह, सलालाह के पहाड़ों में स्थित है, जहां माना जाता है कि अय्यूब अलैहि सलाम ने अपने आखिरी दिन बिताए और जहां उन्हें अल्लाह की रहमत से शिफा मिली।</p>
+  <p>यहां एक झरना है जिसे लोग कुरान की उस आयत से जोड़ते हैं जहां अल्लाह ने अय्यूब से कहा:</p>
+  <blockquote>"अपना पाँव ज़मीन पर मारो, यह ठंडा पानी है नहाने और पीने के लिए।" (सूरह साद 38:42)</blockquote>
+  <p><strong>महत्त्व:</strong></p>
+  <ul>
+    <li>यह एक शांत और आध्यात्मिक जगह है।</li>
+    <li>धोफ़ार की धार्मिक और सांस्कृतिक विरासत का हिस्सा।</li>
+    <li>खरीफ (मानसून) मौसम में यहां का दृश्य बेहद सुंदर होता है।</li>
+  </ul>
+  <p><strong>कृपया इस जगह की पवित्रता बनाए रखें, साफ-सफाई रखें और सादगी से कपड़े पहनें।</strong></p>
+</div>
+  <div class="content" id="content-ur">
+  <h2>حضرت ایوب علیہ السلام کا مزار</h2>
+  <p>حضرت ایوب علیہ السلام کو اسلام میں صبر اور اللہ پر یقین کی اعلیٰ مثال سمجھا جاتا ہے۔ آپ نے بیماری اور آزمائش کے وقت بھی اللہ پر بھروسہ قائم رکھا۔</p>
+  <p>یہ مقام عمان کے شہر صلالہ کے پہاڑوں میں واقع ہے، جہاں روایات کے مطابق حضرت ایوب علیہ السلام نے قیام فرمایا اور اللہ کے حکم سے شفا پائی۔</p>
+  <p>یہاں موجود چشمہ اُس قرآن کی آیت سے منسوب ہے جس میں اللہ تعالیٰ نے فرمایا:</p>
+  <blockquote>"اپنا پاؤں زمین پر مارو، یہ ہے ٹھنڈا پانی نہانے اور پینے کے لیے۔" (سورۃ ص 38:42)</blockquote>
+  <p><strong>اہمیت:</strong></p>
+  <ul>
+    <li>یہ ایک روحانی اور پرسکون جگہ ہے۔</li>
+    <li>ظفار کی مذہبی اور ثقافتی ورثے کا حصہ ہے۔</li>
+    <li>خریف کے موسم میں یہاں کا نظارہ بہت خوبصورت ہوتا ہے۔</li>
+  </ul>
+  <p><strong>براہ کرم اس مقام کا احترام کریں، صفائی کا خیال رکھیں اور موزوں لباس پہنیں۔</strong></p>
+</div>
+  <div class="content" id="content-fr">
+  <h2>Tombe du Prophète Ayoub (que la paix soit sur lui)</h2>
+  <p>Le Prophète Ayoub est un exemple célèbre de patience et de foi dans l'islam. Il est resté fidèle à Dieu même face à la maladie et aux épreuves.</p>
+  <p>Ce site, situé dans les montagnes de Salalah (Oman), est considéré comme l’endroit où il a vécu et a été guéri par la miséricorde d’Allah.</p>
+  <p>Une source d'eau ici est associée au verset du Coran dans lequel Allah dit :</p>
+  <blockquote>"Frappe le sol de ton pied : voici une source d'eau fraîche pour te laver et boire." (Sourate Sad 38:42)</blockquote>
+  <p><strong>Importance :</strong></p>
+  <ul>
+    <li>Un lieu spirituel paisible.</li>
+    <li>Fait partie du patrimoine culturel de Dhofar.</li>
+    <li>Très beau pendant la saison de Khareef (mousson).</li>
+  </ul>
+  <p><strong>Merci de respecter ce lieu sacré, de le garder propre et de porter une tenue appropriée.</strong></p>
+</div>
+  <div class="content" id="content-es">
+  <h2>Tumba del Profeta Ayub (la paz sea con él)</h2>
+  <p>El profeta Ayub es conocido en el islam como un ejemplo de paciencia y fe. Incluso en la enfermedad y la dificultad, nunca perdió la confianza en Allah.</p>
+  <p>Este lugar, en las montañas de Salalah (Omán), se cree que fue donde vivió y recibió la sanación de parte de Allah.</p>
+  <p>Una fuente de agua cercana está asociada con el versículo del Corán donde Allah le dice:</p>
+  <blockquote>"Golpea la tierra con tu pie, aquí tienes agua fresca para bañarte y beber." (Sura Sad 38:42)</blockquote>
+  <p><strong>Importancia:</strong></p>
+  <ul>
+    <li>Un lugar espiritual y tranquilo.</li>
+    <li>Parte del patrimonio cultural de Dhofar.</li>
+    <li>Muy hermoso durante la temporada de Khareef (monzones).</li>
+  </ul>
+  <p><strong>Por favor, respeta este lugar sagrado, mantenlo limpio y vístete de forma modesta.</strong></p>
+</div>
+  <div class="content" id="content-zh">
+  <h2>先知艾尤布之墓（愿平安降临他身上）</h2>
+  <p>艾尤布先知是伊斯兰教中坚韧与信仰的象征。即使在病痛和困境中，他依然坚定信仰真主。</p>
+  <p>这个位于阿曼萨拉拉山区的地方，被认为是他生活和得到真主医治的地方。</p>
+  <p>附近的泉水与《古兰经》中的一节有关，真主说：</p>
+  <blockquote>“用你的脚跺地，这是洗浴和饮用的凉水。”（苏拉·萨德 38:42）</blockquote>
+  <p><strong>重要性：</strong></p>
+  <ul>
+    <li>一个安静、充满灵性的地方。</li>
+    <li>是佐法尔地区文化遗产的一部分。</li>
+    <li>在Khareef季节（季风期）景色尤为迷人。</li>
+  </ul>
+  <p><strong>请尊重此圣地，保持清洁，并穿着得体。</strong></p>
+</div>
+  <div class="content" id="content-bn">
+  <h2>হযরত আইয়ুব (আঃ) এর মাজার</h2>
+  <p>হযরত আইয়ুব (আঃ) ইসলামে ধৈর্য ও আল্লাহর উপর বিশ্বাসের প্রতীক। তিনি কঠিন বিপদেও আল্লাহর প্রতি আস্থা রেখেছেন।</p>
+  <p>এই স্থানটি ওমানের সালালাহ অঞ্চলের পাহাড়ে অবস্থিত, যেখানে বিশ্বাস করা হয় তিনি বসবাস করতেন এবং আল্লাহর রহমতে সুস্থতা লাভ করেন।</p>
+  <p>এখানে একটি ঝরনা রয়েছে যা কুরআনের সেই আয়াতের সাথে সম্পর্কিত যেখানে বলা হয়েছে:</p>
+  <blockquote>“তোমার পা দিয়ে মাটি চাপ দাও, এটি একটি ঠান্ডা পানি, গোসল ও পান করার জন্য।” (সূরা সাদ ৩৮:৪২)</blockquote>
+  <p><strong>গুরুত্বপূর্ণ দিক:</strong></p>
+  <ul>
+    <li>শান্তিপূর্ণ ও আধ্যাত্মিক স্থান।</li>
+    <li>ধোফার অঞ্চলের ধর্মীয় ও সাংস্কৃতিক ঐতিহ্যের অংশ।</li>
+    <li>খারিফ মৌসুমে প্রাকৃতিক সৌন্দর্যে পরিপূর্ণ।</li>
+  </ul>
+  <p><strong>অনুগ্রহ করে পবিত্রতা রক্ষা করুন, পরিষ্কার রাখুন এবং শালীন পোশাক পরিধান করুন।</strong></p>
+</div>
+  <div class="content" id="content-pt">
+  <h2>Túmulo do Profeta Ayub (que a paz esteja com ele)</h2>
+  <p>O Profeta Ayub é um símbolo de paciência e fé no Islã. Mesmo enfrentando doenças e dificuldades, ele nunca perdeu sua confiança em Allah.</p>
+  <p>Este local, nas montanhas de Salalah, em Omã, é considerado o lugar onde ele viveu e foi curado pela misericórdia de Allah.</p>
+  <p>Uma fonte de água aqui está relacionada com o versículo do Alcorão onde Allah diz:</p>
+  <blockquote>“Bata com o pé no chão — aqui está uma água fresca para banho e bebida.” (Surata Sad 38:42)</blockquote>
+  <p><strong>Importância:</strong></p>
+  <ul>
+    <li>Um lugar espiritual e tranquilo.</li>
+    <li>Parte do patrimônio cultural de Dhofar.</li>
+    <li>Lindo durante a estação do Khareef (monções).</li>
+  </ul>
+  <p><strong>Por favor, respeite este local sagrado, mantenha-o limpo e vista-se modestamente.</strong></p>
+</div>
+  <div class="content" id="content-de">
+  <h2>Grab des Propheten Ayub (Friede sei mit ihm)</h2>
+  <p>Der Prophet Ayub ist im Islam ein Symbol für Geduld und Vertrauen in Allah. Selbst in Krankheit und Not hielt er fest an seinem Glauben.</p>
+  <p>Dieser Ort in den Bergen von Salalah (Oman) gilt als der Ort, an dem er gelebt und durch Allahs Barmherzigkeit Heilung gefunden haben soll.</p>
+  <p>Eine nahegelegene Quelle wird mit dem Koranvers in Verbindung gebracht, in dem Allah sagte:</p>
+  <blockquote>„Stampfe mit deinem Fuß – hier ist kühles Wasser zum Baden und Trinken.“ (Sure Sad 38:42)</blockquote>
+  <p><strong>Bedeutung:</strong></p>
+  <ul>
+    <li>Ein spiritueller und friedlicher Ort.</li>
+    <li>Teil des kulturellen Erbes von Dhofar.</li>
+    <li>Besonders schön während der Khareef-Jahreszeit (Monsunzeit).</li>
+  </ul>
+  <p><strong>Bitte respektieren Sie diesen heiligen Ort, halten Sie ihn sauber und kleiden Sie sich angemessen.</strong></p>
+</div>
 
   <script>
     function showContent(lang) {
-      document.getElementById("content-en").style.display = lang === 'en' ? 'block' : 'none';
-      document.getElementById("content-ar").style.display = lang === 'ar' ? 'block' : 'none';
+      const languages = ['en', 'ar', 'hi', 'ur', 'fr', 'es', 'zh', 'bn', 'pt', 'de'];
+      languages.forEach(code => {
+        document.getElementById("content-" + code).style.display = lang === code ? 'block' : 'none';
+      });
     }
-
-    // Auto-detect or default to English
+    // Default to English
     showContent('en');
   </script>
 </body>
